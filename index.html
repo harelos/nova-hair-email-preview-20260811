@@ -2,134 +2,94 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="color-scheme" content="light only">
-  <title>Nova Hair — הדרך השפויה</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Hair — Email 01</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Frank+Ruhl+Libre:wght@500;700&display=swap');
-    html,body{margin:0!important;padding:0!important;width:100%!important;background:#e8e2da;}
-    table{border-spacing:0;border-collapse:collapse;}
-    img{border:0;display:block;line-height:100%;}
-    a{color:inherit;}
-    .email-shell{width:100%;max-width:600px;}
-    .copy-pad{padding-right:52px;padding-left:52px;}
-    .serif{font-family:'Frank Ruhl Libre',Georgia,'Times New Roman',serif;}
-    .sans{font-family:'Assistant',Arial,Helvetica,sans-serif;}
-    .copy-block{max-width:480px;margin:0 auto;}
-    .benefit-col{width:50%;}
-    .trust-col{width:33.333%;}
-    @media screen and (max-width:620px){
-      .email-shell{width:100%!important;}
-      .copy-pad{padding-right:25px!important;padding-left:25px!important;}
-      .hero-title{font-size:30px!important;line-height:1.18!important;}
-      .body-copy{font-size:17px!important;line-height:1.8!important;}
-      .hero-overlay{padding:34px 25px 26px!important;}
-      .benefit-col{display:block!important;width:100%!important;padding:0!important;}
-      .benefit-col + .benefit-col{padding-top:28px!important;}
-      .trust-col{display:block!important;width:100%!important;padding:8px 0!important;}
-      .trust-col + .trust-col{padding-top:0!important;}
-      .cta-button{width:100%!important;}
-      .product-image{width:82%!important;max-width:420px!important;}
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #eeeae4; }
+    body { -webkit-text-size-adjust: 100%; }
+    .email-wrapper { max-width: 600px; width: 100%; margin: 0 auto; background: #fff; overflow: hidden; }
+    .text-container { max-width: 420px; margin: 0 auto; text-align: center; }
+    .brand-header { padding: 22px 20px 18px; background: #fff; text-align: center; }
+    .brand-mark { font-family: "Playfair Display", "Frank Ruhl Libre", "Lora", Georgia, serif; font-size: 17px; letter-spacing: 3px; font-weight: 600; color: #111; }
+    .hero-image { display: block; width: 600px; max-width: 100%; height: 750px; object-fit: cover; border: 0; }
+    .hero-copy { padding: 32px 20px 40px; background: #fff; text-align: center; }
+    h1, h2 { font-family: "Playfair Display", "Frank Ruhl Libre", "Lora", Georgia, serif; font-weight: 600; color: #111; }
+    h1 { max-width: 420px; margin: 0 auto 12px; font-size: 28px; line-height: 36px; }
+    .hero-body, .product-subtext, .icon-label, .footer-copy { font-family: "Assistant", "Helvetica Neue", Arial, sans-serif; font-weight: 300; }
+    .hero-body { max-width: 420px; margin: 0 auto 24px; font-size: 15px; line-height: 22px; color: #555; }
+    .cta-primary, .cta-secondary { text-decoration: none; display: inline-block; text-align: center; }
+    .cta-primary { width: 280px; max-width: 100%; height: 48px; line-height: 48px; background: #731010; color: #fff; font-family: "Assistant", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: 700; border-radius: 2px; }
+    .product-showcase { background: #111; padding: 56px 20px; text-align: center; }
+    .product-image { display: block; width: 320px; max-width: 100%; height: auto; margin: 0 auto 28px; }
+    h2 { margin: 0 0 10px; font-size: 24px; line-height: 32px; color: #fff; }
+    .product-subtext { max-width: 360px; margin: 0 auto 24px; font-size: 14px; line-height: 20px; color: #ccc; }
+    .cta-secondary { width: 220px; max-width: 100%; height: 44px; line-height: 42px; background: transparent; color: #fff; border: 1px solid #fff; font-family: "Assistant", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; border-radius: 2px; }
+    .icon-grid-section { padding: 48px 20px; background: #fff; }
+    .icon-grid { display: flex; justify-content: center; gap: 32px; max-width: 520px; margin: 0 auto; }
+    .icon-item { width: 140px; text-align: center; border: 0 !important; padding: 0 !important; box-shadow: none !important; }
+    .icon-item img { display: block; width: 32px; height: 32px; margin: 0 auto 12px; }
+    .icon-label { margin: 0; font-size: 13px; line-height: 18px; font-weight: 600; color: #111; }
+    .footer { padding: 32px 20px; background: #0a0a0a; text-align: center; }
+    .footer-copy { margin: 0; font-size: 12px; line-height: 18px; color: #777; }
+    .footer-copy a { color: #777; text-decoration: underline; }
+    @media (max-width: 620px) {
+      html, body { background: #fff; }
+      .hero-image { width: 100%; height: auto; aspect-ratio: 4 / 5; }
+    }
+    @media (max-width: 420px) {
+      .icon-grid { flex-direction: column; gap: 24px; align-items: center; }
     }
   </style>
 </head>
-<body style="margin:0;padding:0;background:#e8e2da;direction:rtl;">
-  <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;mso-hide:all;">הגיע הזמן להפסיק להאשים את השורשים...&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;</div>
-  <table role="presentation" width="100%" bgcolor="#e8e2da" dir="rtl">
-    <tr><td align="center" style="padding:20px 0 36px;">
-      <table role="presentation" class="email-shell" width="600" bgcolor="#fcfaf7" dir="rtl" style="width:600px;max-width:600px;background:#fcfaf7;box-shadow:0 10px 36px rgba(27,20,16,.10);">
-        <tr>
-          <td align="center" style="padding:28px 20px 24px;background:#ffffff;border-top:4px solid #731010;">
-            <div class="serif" style="font-size:27px;line-height:1;letter-spacing:7px;color:#111111;text-align:center;direction:ltr;">NOVA</div>
-            <div class="sans" style="margin-top:8px;font-size:9px;line-height:1;letter-spacing:6px;color:#111111;text-align:center;direction:ltr;">HAIR</div>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:0;background:#15110f;position:relative;">
-            <div class="hero-wrap" style="position:relative;width:100%;overflow:hidden;">
-              <img src="assets/hero-mirror.png" width="600" alt="אישה בוחנת בעדינות את שורשי השיער מול המראה" style="width:100%;max-width:600px;height:auto;">
-              <div class="hero-overlay" style="position:absolute;right:0;bottom:0;left:0;padding:88px 52px 34px;background:linear-gradient(to top,rgba(9,7,6,.92) 0%,rgba(9,7,6,.58) 45%,rgba(9,7,6,0) 100%);text-align:center;direction:rtl;">
-                <h1 class="hero-title serif" style="max-width:480px;margin:0 auto;color:#ffffff;font-size:38px;line-height:1.16;font-weight:700;letter-spacing:-.3px;text-align:center;">הבוקר שבו הפסקתי להילחם בשיער שלי.</h1>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="copy-pad" style="padding:42px 52px 42px;background:#fcfaf7;text-align:center;direction:rtl;">
-            <div class="copy-block body-copy sans" style="font-size:18px;line-height:1.82;font-weight:300;color:#302a27;text-align:center;direction:rtl;">
-              <p style="margin:0 0 20px;font-weight:600;">היי דנה,</p>
-              <p style="margin:0 0 20px;">מכירה את הבוקר הזה שאת מציצה במראה לפני שאת יוצאת מהבית, ופתאום הם שוב שם?</p>
-              <p style="margin:0 0 20px;color:#731010;font-weight:600;">השורשים הלבנים שרק לפני רגע היית בטוחה שכיסית.</p>
-              <p style="margin:0 0 20px;">ושוב מתחיל אותו מעגל: לקבוע תור למספרה, לשרוף שעתיים באמצע היום, לשלם מאות שקלים, ולקוות שהפעם הצבע יחזיק קצת יותר.</p>
-              <p style="margin:0 0 20px;">אבל האמת היא, שהתסכול האמיתי מגיע יום-יומיים אחרי. כשהשיער מרגיש פתאום יבש, חסר ברק, או פשוט חלש יותר.</p>
-              <p style="margin:0 0 20px;">הרבה נשים בטוחות שזה פשוט "השיער שלהן" שנהיה בעייתי עם השנים. אבל מה אם הבעיה היא לא בשיער שלך, אלא בדרך שבה את צובעת אותו?</p>
-              <p style="margin:0;">רוב שיטות הצביעה הרגילות דורשות פעולה אגרסיבית כדי שהצבע ייתפס. התוצאה? אולי אין שיער לבן, אבל יש שיער שמרגיש כמו קש.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:0;background:#111111;color:#ffffff;text-align:center;direction:rtl;">
-            <div style="padding:48px 24px 14px;background:#111111;">
-              <img class="product-image" src="assets/nova-product-marble.png" width="420" alt="בקבוק Nova Hair על משטח שיש שחור" style="width:70%;max-width:420px;height:auto;margin:0 auto;">
-            </div>
-            <div class="copy-pad" style="padding:32px 52px 52px;background:#111111;text-align:center;direction:rtl;">
-              <div class="copy-block body-copy sans" style="font-size:18px;line-height:1.82;font-weight:300;color:#f7f2ee;text-align:center;direction:rtl;">
-                <h2 class="serif" style="margin:0 0 20px;color:#ffffff;font-size:31px;line-height:1.25;font-weight:700;text-align:center;">כאן בדיוק נכנס לתמונה Nova Hair.</h2>
-                <p style="margin:0 0 18px;">לא רצינו לייצר "עוד צבע לשיער". רצינו ליצור דרך שפויה יותר לגשת לכל הסיפור הזה.</p>
-                <p style="margin:0 0 18px;color:#ffffff;font-weight:600;">בלי לקבוע תורים. בלי ריחות חריפים של אמוניה. בלי להרוס את השערה.</p>
-                <p style="margin:0 0 18px;">במקום לפגוע בשכבת ההגנה של השיער, הפורמולה שלנו מבוססת על מנגנון חכם (Micro-Color Sphere™) שעובד ברמת pH 5.5 עדינה. חלקיקי הצבע פשוט נצמדים לשכבה החיצונית של השערה ומכסים את השיבה במלואה.</p>
-                <p style="margin:0 0 18px;">החלטנו לשלב בין כיסוי יעיל לבין תחושת רכות של טיפוח – הכל ב-10 דקות, אצלך במקלחת בבית.</p>
-                <p style="margin:0;color:#d68b8b;font-size:21px;font-weight:600;">שיטה שצובעת, מטפלת, ולא פוגעת.</p>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="copy-pad" style="padding:50px 52px 18px;background:#fcfaf7;text-align:center;direction:rtl;">
-            <table role="presentation" width="100%" dir="rtl">
-              <tr>
-                <td class="benefit-col" width="50%" valign="top" style="width:50%;padding:0 0 12px 24px;text-align:center;">
-                  <img src="assets/icon-clock.svg" width="52" height="52" alt="" style="width:52px;height:52px;margin:0 auto 18px;">
-                  <div class="serif" style="font-size:23px;line-height:1.3;font-weight:700;color:#171311;text-align:center;">10 דקות בבית</div>
-                  <div class="sans" style="margin-top:10px;font-size:15px;line-height:1.72;font-weight:300;color:#514843;text-align:center;">חופפים, ממתינים קצת במקלחת, ושוטפים. בלי נסיעות ובלי המתנה במספרה.</div>
-                </td>
-                <td class="benefit-col" width="50%" valign="top" style="width:50%;padding:0 24px 12px 0;text-align:center;">
-                  <img src="assets/icon-leaf.svg" width="52" height="52" alt="" style="width:52px;height:52px;margin:0 auto 18px;">
-                  <div class="serif" style="font-size:23px;line-height:1.3;font-weight:700;color:#171311;text-align:center;">טיפוח, לא רק צבע</div>
-                  <div class="sans" style="margin-top:10px;font-size:15px;line-height:1.72;font-weight:300;color:#514843;text-align:center;">ללא אמוניה וסולפטים. מועשר בג'ינסנג ושמן שומשום שחור לשיער רך ונעים.</div>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td class="copy-pad" style="padding:26px 52px 18px;background:#fcfaf7;text-align:center;direction:rtl;">
-            <div class="sans" style="padding:22px 0 16px;border-top:1px solid #ded5cc;color:#2c2724;text-align:center;direction:rtl;">
-              <table role="presentation" width="100%" dir="rtl">
-                <tr>
-                  <td class="trust-col" width="33.333%" style="width:33.333%;padding:0 8px;text-align:center;vertical-align:top;"><div style="margin-bottom:7px;color:#731010;font-size:18px;line-height:1;">◌</div><div style="font-size:13px;line-height:1.45;font-weight:600;">ללא אמוניה</div></td>
-                  <td class="trust-col" width="33.333%" style="width:33.333%;padding:0 8px;text-align:center;vertical-align:top;"><div style="margin-bottom:7px;color:#731010;font-size:18px;line-height:1;">◌</div><div style="font-size:13px;line-height:1.45;font-weight:600;">ללא סולפטים ופרבנים</div></td>
-                  <td class="trust-col" width="33.333%" style="width:33.333%;padding:0 8px;text-align:center;vertical-align:top;"><div style="margin-bottom:7px;color:#731010;font-size:18px;line-height:1;">◌</div><div style="font-size:13px;line-height:1.45;font-weight:600;">שירות לקוחות בישראל</div></td>
-                </tr>
-              </table>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="padding:18px 52px 52px;background:#fcfaf7;">
-            <a class="cta-button sans" href="#" style="display:inline-block;width:80%;box-sizing:border-box;padding:17px 24px;border-radius:2px;background:#731010;color:#ffffff;text-decoration:none;font-size:18px;line-height:1.25;font-weight:700;letter-spacing:.5px;text-align:center;">לבחירת הגוון שלך והיכרות עם השיטה <span dir="ltr" style="direction:ltr;unicode-bidi:isolate;">&gt;&gt;</span></a>
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="padding:32px 34px;background:#171311;color:#cfc7c2;font-family:'Assistant',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.75;text-align:center;direction:rtl;">
-            <p style="margin:0 0 8px;color:#ffffff;">© 2026 Nova Hair. כל הזכויות שמורות.</p>
-            <p style="margin:0 0 8px;">אנחנו כאן לכל שאלה, זמינים בשירות לקוחות ישראלי ב-WhatsApp.</p>
-            <p style="margin:0 0 8px;">קיבלת את המייל הזה כי נרשמת לרשימת התפוצה שלנו או שביצעת רכישה בעבר.</p>
-            <p style="margin:0;">אם את מעדיפה לא לקבל מאיתנו טיפים והטבות יותר, תוכלי <a href="#" style="color:#ffffff;text-decoration:underline;">להסיר את עצמך בכל רגע</a>.</p>
-          </td>
-        </tr>
-      </table>
-    </td></tr>
-  </table>
+<body>
+  <main class="email-wrapper" role="article" aria-label="Nova Hair Email 01">
+    <header class="brand-header">
+      <div class="brand-mark">NOVA HAIR</div>
+    </header>
+
+    <section aria-label="Nova Hair introduction">
+      <img class="hero-image" src="assets/hero-mirror-v2-vertical.png" alt="אישה מביטה בשיערה במראת חדר אמבטיה מואר" width="600" height="750">
+      <div class="hero-copy">
+        <div class="text-container">
+          <h1>השיער שלך. בגרסה הטובה ביותר שלו.</h1>
+          <p class="hero-body">כיסוי שיבה מלא ב-10 דקות. מראה טבעי, רך וזוהר.</p>
+          <a class="cta-primary" href="https://novahair.co.il/pages/nova-hair">לכל הגוונים והמארזים</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-showcase" aria-label="Nova Hair product">
+      <img class="product-image" src="assets/nova-product-marble.png" alt="בקבוק Nova Hair על משטח שיש כהה" width="320">
+      <h2>Start Your Routine</h2>
+      <p class="product-subtext">פורמולת Micro-Color Sphere™. צובעת, מטפלת, ולא פוגעת.</p>
+      <a class="cta-secondary" href="https://novahair.co.il/pages/nova-hair">SHOP NOVA</a>
+    </section>
+
+    <section class="icon-grid-section" aria-label="Nova Hair benefits">
+      <div class="icon-grid">
+        <div class="icon-item">
+          <img src="assets/icon-clock.svg" alt="" width="32" height="32">
+          <p class="icon-label">10 דקות במקלחת</p>
+        </div>
+        <div class="icon-item">
+          <img src="assets/icon-leaf.svg" alt="" width="32" height="32">
+          <p class="icon-label">מועשר בג'ינסנג לחות</p>
+        </div>
+        <div class="icon-item">
+          <img src="assets/icon-check.svg" alt="" width="32" height="32">
+          <p class="icon-label">ללא אמוניה וסולפטים</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer-copy">© 2026 Nova Hair. כל הזכויות שמורות.<br><a href="#unsubscribe">[להסרה מרשימת התפוצה]</a></p>
+    </footer>
+  </main>
 </body>
 </html>
